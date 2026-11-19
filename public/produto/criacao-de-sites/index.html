@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ── SEO: título, description e canonical únicos desta página ── -->
+  <title>Criação de Sites em São Paulo — Allaska</title>
+  <meta name="description" content="Criação de sites profissionais em São Paulo: design exclusivo, feitos para gerar leads e vender, no ar em poucos dias. Você só paga depois de aprovar. Fale com a Allaska.">
+  <link rel="canonical" href="https://allaska.com.br/produto/criacao-de-sites/">
+
+  <!-- ── Open Graph (mesmo padrão da home) ── -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Allaska">
+  <meta property="og:title" content="Criação de Sites em São Paulo — Allaska">
+  <meta property="og:description" content="Sites profissionais com design exclusivo, feitos para converter. No ar em dias, e você só paga depois de aprovar.">
+  <meta property="og:url" content="https://allaska.com.br/produto/criacao-de-sites/">
+  <meta property="og:image" content="https://allaska.com.br/logo.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--c:#7c5cff}
+    html{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.1) transparent}
+    body{background:#080808;color:#f0f0eb;font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+    /* ── NAV ── */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1px solid rgba(255,255,255,.05);background:rgba(8,8,8,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+    .nav-logo{font-size:17px;font-weight:700;letter-spacing:.1em;color:#fff;text-transform:uppercase;text-decoration:none}
+    .nav-back{font-size:12px;font-weight:600;color:rgba(255,255,255,.82);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:8px 20px;text-decoration:none;cursor:pointer;transition:background .18s,color .18s}
+    .nav-back:hover{background:rgba(255,255,255,.15);color:#fff}
+
+    /* ── HERO SPLIT ── */
+    .lp-hero{position:relative;min-height:90vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:linear-gradient(135deg,#0a0a0a 0%,#080808 55%,#060606 100%)}
+    .lp-hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 65% 65% at 80% 40%, var(--c)1c 0%, transparent 68%)}
+    .lp-hero-left{position:relative;z-index:2;padding:130px 64px 80px 64px;display:flex;flex-direction:column;justify-content:center}
+    .lp-hero-right{position:relative;z-index:2;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:500px}
+    .lp-hero-sep{position:absolute;left:50%;top:10%;bottom:10%;width:1px;background:rgba(255,255,255,.06);z-index:3}
+
+    .product-badge{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--c);border:1px solid var(--c);border-radius:100px;padding:4px 14px;margin-bottom:28px;opacity:.9;align-self:flex-start}
+    .lp-headline{font-size:clamp(26px,3.8vw,50px);font-weight:800;line-height:1.07;letter-spacing:-.04em;color:#fff;margin-bottom:20px}
+    .lp-subtitle{font-size:15px;color:rgba(255,255,255,.42);line-height:1.72;max-width:480px;margin-bottom:36px}
+    .lp-hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+    /* ── DIVIDER ── */
+    .lp-divider{width:100%;height:1px;background:rgba(255,255,255,.06)}
+
+    /* ── SECTIONS ── */
+    .lp-section{padding:64px 48px;max-width:1100px;margin:0 auto}
+    .section-label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--c);margin-bottom:16px;display:block}
+
+    /* ── TEXTO CORRIDO (problema / incluso / resultado) ── */
+    .body-text p{font-size:15px;color:rgba(255,255,255,.46);line-height:1.85;max-width:680px;margin-bottom:16px}
+    .body-text p:last-child{margin-bottom:0}
+
+    /* ── STEPS ── */
+    .steps{display:flex;flex-direction:column}
+    .step{display:grid;grid-template-columns:48px 1fr;gap:0 20px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .step:last-child{border-bottom:none}
+    .step-num{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:rgba(255,255,255,.28);flex-shrink:0;margin-top:2px}
+    .step-title{font-size:15px;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:-.02em;margin-bottom:6px}
+    .step-desc{font-size:13.5px;color:rgba(255,255,255,.38);line-height:1.8}
+
+    /* ── BOTÕES ── */
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;background:#fff;color:#0a0a0a;font-size:13px;font-weight:700;letter-spacing:.03em;text-decoration:none;border-radius:100px;transition:opacity .2s,transform .2s}
+    .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;background:transparent;color:rgba(255,255,255,.6);font-size:13px;font-weight:600;letter-spacing:.03em;text-decoration:none;border:1px solid rgba(255,255,255,.14);border-radius:100px;transition:border-color .2s,color .2s}
+    .btn-secondary:hover{border-color:rgba(255,255,255,.32);color:rgba(255,255,255,.9)}
+
+    /* ── CTA SECTION ── */
+    .lp-cta-section{padding:64px 48px;max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+    .cta-note{font-size:11px;color:rgba(255,255,255,.22)}
+
+    /* ── COMBO BLOCK ── */
+    .combo-block{margin:0 48px 80px;padding:36px 44px;border:1px solid rgba(255,255,255,.07);border-radius:14px;background:rgba(255,255,255,.025);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+    .combo-block h2{font-size:19px;font-weight:700;color:#fff;letter-spacing:-.03em;margin-bottom:6px}
+    .combo-block p{font-size:13px;color:rgba(255,255,255,.38);line-height:1.6;max-width:460px}
+    .btn-combo{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.78);font-size:12.5px;font-weight:600;letter-spacing:.03em;text-decoration:none;border:1px solid rgba(255,255,255,.14);border-radius:100px;transition:background .2s,color .2s;white-space:nowrap}
+    .btn-combo:hover{background:rgba(255,255,255,.13);color:#fff}
+
+    /* ── FOOTER ── */
+    .lp-footer{padding:28px 48px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .footer-brand{font-size:14px;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.3);text-transform:uppercase}
+    .footer-note{font-size:11px;color:rgba(255,255,255,.18)}
+
+    /* ── VISUAL 3D (browser mockup) ── */
+    @keyframes spv-slide-u {from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes spv-float3d {0%,100%{transform:perspective(700px) rotateX(8deg) rotateY(-11deg) translateY(0)}50%{transform:perspective(700px) rotateX(6deg) rotateY(-14deg) translateY(-10px)}}
+    .slv-browser{width:300px;background:rgba(10,10,10,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--c)30;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 60px var(--c)28;overflow:hidden}
+    .slv-bar{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.03)}
+    .slv-dot{width:8px;height:8px;border-radius:50%;display:block}
+    .slv-url{flex:1;background:rgba(255,255,255,.06);border-radius:100px;padding:3px 10px;font-size:7.5px;color:rgba(255,255,255,.28);margin-left:4px}
+    .slv-hero{height:62px;background:linear-gradient(135deg,var(--c)22,var(--c)06);border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;padding:0 16px}
+    .slv-body{padding:12px 16px;display:flex;flex-direction:column;gap:7px}
+    .slv-line{height:7px;background:rgba(255,255,255,.07);border-radius:3px}
+    .slv-cta-mock{padding:6px 12px;border-radius:100px;font-size:7.5px}
+    .stat-card{position:absolute;background:rgba(10,10,10,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--c)30;border-radius:12px;padding:12px 16px;white-space:nowrap;animation:spv-slide-u .5s both}
+    .stat-num{font-size:24px;font-weight:800;letter-spacing:-.04em}
+    .stat-label{font-size:8.5px;color:rgba(255,255,255,.35);margin-top:1px}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:900px){
+      .lp-hero{grid-template-columns:1fr;min-height:auto}
+      .lp-hero-left{padding:120px 32px 48px}
+      .lp-hero-right{min-height:360px;border-top:1px solid rgba(255,255,255,.06)}
+      .lp-hero-sep{display:none}
+      nav{padding:18px 24px}
+      .lp-section{padding:48px 24px}
+      .lp-cta-section{padding:48px 24px}
+      .combo-block{margin:0 24px 60px;padding:28px 24px}
+      .lp-footer{padding:24px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-back" href="/">← Voltar</a>
+  <a class="nav-logo" href="/">Allaska</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="lp-hero">
+  <div class="lp-hero-bg"></div>
+  <div class="lp-hero-sep"></div>
+
+  <div class="lp-hero-left">
+    <span class="product-badge">PRODUTO 01</span>
+    <h1 class="lp-headline">Criação de Sites em São Paulo</h1>
+    <p class="lp-subtitle">A Allaska cria sites profissionais para empresas de São Paulo que precisam de presença digital de verdade — não uma página parada que ninguém acha. Sites com design exclusivo, feitos para aparecer no Google e transformar visitantes em clientes. E o melhor: você vê o site pronto antes de pagar qualquer coisa.</p>
+    <div class="lp-hero-ctas">
+      <a class="btn-primary" href="https://wa.me/5511940643165?text=Ol%C3%A1%2C%20ALLASKA!%20Quero%20meu%20site%20%E2%80%93%20falar%20com%20a%20Allaska." target="_blank" rel="noopener">Quero meu site — falar com a Allaska</a>
+      <a class="btn-secondary" href="/combo.html">Monte seu Combo →</a>
+    </div>
+  </div>
+
+  <div class="lp-hero-right">
+    <div style="position:relative;animation:spv-float3d 5s ease-in-out infinite">
+      <div class="slv-browser">
+        <div class="slv-bar">
+          <span class="slv-dot" style="background:#e74c3c60"></span>
+          <span class="slv-dot" style="background:#f39c1260"></span>
+          <span class="slv-dot" style="background:#3ecf5e60"></span>
+          <div class="slv-url">seusite.com.br</div>
+        </div>
+        <div class="slv-hero">
+          <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,.68)">Seu Negócio · Premium</div>
+        </div>
+        <div class="slv-body">
+          <div class="slv-line" style="width:65%"></div>
+          <div class="slv-line" style="width:82%"></div>
+          <div class="slv-line" style="width:48%"></div>
+          <div class="slv-line" style="width:72%"></div>
+          <div class="slv-line" style="width:56%"></div>
+          <div style="display:flex;gap:8px;margin-top:4px">
+            <div class="slv-cta-mock" style="background:var(--c)30;border:1px solid var(--c)55;color:var(--c)">CTA Principal</div>
+            <div class="slv-cta-mock" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25)">Saiba mais</div>
+          </div>
+        </div>
+      </div>
+      <div class="stat-card" style="top:-32px;right:-62px;animation-delay:.2s">
+        <div class="stat-num" style="color:var(--c)">+312%</div>
+        <div class="stat-label">visitantes orgânicos</div>
+      </div>
+      <div class="stat-card" style="bottom:-32px;left:-56px;animation-delay:.4s">
+        <div class="stat-num" style="color:#3ecf5e">#1</div>
+        <div class="stat-label">Google · barbearia SP</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="lp-divider"></div>
+
+<!-- ── PROBLEMA ── -->
+<section class="lp-section">
+  <h2 class="section-label">O problema de ter um site que não traz cliente</h2>
+  <div class="body-text">
+    <p>A maioria dos sites por aí é template genérico, lento e igual ao do concorrente. Fica bonito na tela, mas não aparece quando alguém pesquisa no Google e não convence quem visita. O resultado é um site que existe só pra dizer que existe — sem gerar contato, sem gerar venda. Um site profissional é o contrário disso: é uma ferramenta que trabalha por você, atraindo quem já está procurando o que você oferece em São Paulo e transformando essa visita em conversa no WhatsApp.</p>
+  </div>
+</section>
+<div class="lp-divider"></div>
+
+<!-- ── COMO FUNCIONA ── -->
+<section class="lp-section">
+  <h2 class="section-label">Como funciona a criação do seu site</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div>
+        <h3 class="step-title">Entendemos seu negócio antes de desenhar</h3>
+        <p class="step-desc">Antes de qualquer linha de código, uma conversa direta: o que sua empresa faz, quem é seu cliente, o que te diferencia. Nada de formulário genérico. O site nasce do seu negócio real.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div>
+        <h3 class="step-title">Criamos um design exclusivo pra você</h3>
+        <p class="step-desc">Nada de template comprado que outras dez empresas usam. Cada site da Allaska é desenhado do zero para a sua marca, para o seu público e para converter — rápido, bonito no celular e feito para aparecer no Google.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div>
+        <h3 class="step-title">Você aprova antes de pagar</h3>
+        <p class="step-desc">A gente te mostra o site pronto antes de qualquer cobrança. Você vê funcionando, aprova, e só então paga. Sem risco, sem comprar no escuro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="lp-divider"></div>
+
+<!-- ── O QUE ESTÁ INCLUSO ── -->
+<section class="lp-section">
+  <h2 class="section-label">O que está incluso</h2>
+  <div class="body-text">
+    <p>Todo site da Allaska sai completo e pronto para trabalhar: design exclusivo feito para o seu negócio, otimização para carregar rápido e funcionar perfeitamente no celular, estrutura preparada para aparecer no Google (SEO técnico desde o início), e integração direta com WhatsApp para o cliente falar com você em um clique. Você recebe um site que não é só bonito — é feito para gerar contato e venda.</p>
+  </div>
+</section>
+<div class="lp-divider"></div>
+
+<!-- ── RESULTADO ── -->
+<section class="lp-section">
+  <h2 class="section-label">O resultado: um site que trabalha por você</h2>
+  <div class="body-text">
+    <p>No fim, você tem um site profissional no ar em poucos dias, com a cara da sua empresa, encontrável no Google e pronto para transformar visitante em cliente. Um endereço que é seu, que ninguém tira, e que trabalha 24 horas atraindo quem está procurando o que você faz em São Paulo.</p>
+  </div>
+</section>
+<div class="lp-divider"></div>
+
+<!-- ── CTA ── -->
+<section class="lp-cta-section">
+  <div class="cta-row">
+    <a class="btn-primary" href="https://wa.me/5511940643165?text=Ol%C3%A1%2C%20ALLASKA!%20Quero%20meu%20site%20%E2%80%93%20falar%20com%20a%20Allaska." target="_blank" rel="noopener">Quero meu site — falar com a Allaska</a>
+    <a class="btn-secondary" href="/combo.html">Monte seu Combo →</a>
+  </div>
+  <p class="cta-note">Ao clicar, você será direcionado ao WhatsApp da ALLASKA.</p>
+</section>
+
+<!-- ── COMBO BLOCK ── -->
+<div class="combo-block">
+  <div>
+    <h2>Não sabe por onde começar? Monte seu combo personalizado.</h2>
+    <p>Responda 3 perguntas rápidas e a ALLASKA monta o pacote ideal para o seu negócio.</p>
+  </div>
+  <a class="btn-combo" href="/combo.html">Montar meu Combo →</a>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="lp-footer">
+  <span class="footer-brand">Allaska</span>
+  <span class="footer-note">© 2026 Allaska · Todos os direitos reservados</span>
+</footer>
+
+</body>
+</html>

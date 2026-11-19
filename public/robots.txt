@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://allaska.com.br/sitemap.xml

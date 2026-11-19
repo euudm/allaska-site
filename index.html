@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Allaska | Sites e sistemas com IA para negócios locais</title>
+    <meta name="description" content="Seu cliente já está procurando. A Allaska cria sites de alta performance e o sistema com IA que prospecta, atende e vende pelo seu negócio. Demo em 48h, você só paga se aprovar." />
+    <link rel="canonical" href="https://allaska.com.br/" />
+    <meta name="theme-color" content="#05080D" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Allaska" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://allaska.com.br/" />
+    <meta property="og:title" content="Allaska | Seu cliente já está procurando" />
+    <meta property="og:description" content="Sites de alta performance e sistemas com IA que prospectam, atendem e vendem por negócios locais. Demo em 48h, você só paga se aprovar." />
+    <meta property="og:image" content="https://allaska.com.br/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="O A da Allaska em vidro decompondo um feixe de luz branca em um espectro de cores" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Allaska | Seu cliente já está procurando" />
+    <meta name="twitter:description" content="Sites de alta performance e sistemas com IA que prospectam, atendem e vendem por negócios locais." />
+    <meta name="twitter:image" content="https://allaska.com.br/og-image.jpg" />
+
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <!-- celular que vai ganhar o prisma 3D: o topo abre no escuro (sem a foto do prisma) e a entrada do 3D
+         é o evento. Se o 3D não vier, o MobilePrism/App tiram a classe e a foto aparece (ver lib/device.ts) -->
+    <script>
+      try {
+        if (matchMedia('(max-width: 639px)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches)
+          document.documentElement.classList.add('m3d')
+      } catch (e) {}
+    </script>
+    <link rel="preload" as="image" href="/midia/prisma/prisma-mobile-base.webp" media="(max-width: 699px)" fetchpriority="high" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Allaska",
+        "url": "https://allaska.com.br/",
+        "logo": "https://allaska.com.br/logo.png",
+        "image": "https://allaska.com.br/og-image.jpg",
+        "description": "Agência que cria sites de alta performance e sistemas com IA de prospecção, atendimento, remarketing, conteúdo para redes e propostas comerciais para negócios locais.",
+        "telephone": "+55-11-94064-3165",
+        "areaServed": { "@type": "Country", "name": "Brasil" },
+        "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
+        "founder": [
+          { "@type": "Person", "name": "Diego de Moraes", "sameAs": "https://www.instagram.com/euudm/" },
+          { "@type": "Person", "name": "Lucka Montino", "sameAs": "https://www.instagram.com/luckamontino/" }
+        ],
+        "sameAs": ["https://www.instagram.com/euudm/", "https://www.instagram.com/luckamontino/"],
+        "knowsAbout": ["Criação de sites", "Prospecção automática", "Chatbot com IA", "Remarketing", "Conteúdo para redes sociais", "Proposta comercial"]
+      }
+    </script>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="14c7951d-377c-434b-99dd-7497f90a4e3e" data-domains="allaska.com.br"></script>
+  </head>
+  <body>
+    <!--
+      Casco estático do hero para telas de toque: pinta assim que o CSS chega (FCP/LCP no celular)
+      e o React assume por baixo com os mesmos pixels (ver App.tsx, remove #shell no primeiro commit).
+      Se mudar o Hero.tsx ou a Nav.tsx, espelhar aqui.
+    -->
+    <div id="shell" class="shell" aria-hidden="true">
+      <header class="nav-veil fixed inset-x-0 top-0 z-50 flex items-center justify-between px-5 py-3 sm:px-8 sm:py-6 lg:px-12">
+        <span class="flex min-h-[44px] items-center gap-2.5">
+          <svg viewBox="0 0 158 152" class="h-[21px] w-[22px]" fill="currentColor"><polygon points="78,3 155,150 100,132 53,62" /><polygon points="42,80 75,142 2,148" /></svg>
+          <span class="text-[17px] font-semibold tracking-[-0.03em]">Allaska</span>
+        </span>
+        <span class="flex items-center gap-2">
+          <span class="inline-block"><span class="flex min-h-[44px] items-center rounded-full border border-[var(--line)] px-4 text-[13.5px] font-semibold tracking-[-0.01em] md:py-2.5"><span class="sm:hidden">Demo grátis</span><span class="hidden sm:inline">Ver minha demo grátis</span></span></span>
+          <span class="burger md:hidden"><span></span><span></span></span>
+        </span>
+      </header>
+      <section class="relative flex min-h-[100svh] flex-col justify-start overflow-x-clip px-5 pt-28 pb-16 sm:justify-end sm:pb-24 sm:px-8 lg:min-h-[115vh] lg:justify-center lg:px-20 lg:pt-24 lg:pb-24 xl:px-28">
+        <picture class="hero-still pointer-events-none relative -mx-5 -mt-28 mb-1 block h-[42svh] sm:absolute sm:top-1/2 sm:right-0 sm:-z-10 sm:m-0 sm:aspect-[16/10] sm:h-auto sm:w-[78%] sm:-translate-y-1/2 lg:w-[72%]">
+          <source media="(min-width: 700px)" srcset="/midia/prisma/prisma-desktop.webp" />
+          <img src="/midia/prisma/prisma-mobile-base.webp" alt="" class="h-full w-full object-cover object-top sm:object-center" fetchpriority="high" decoding="sync" />
+        </picture>
+        <div class="relative max-w-[1400px]">
+          <p class="eyebrow mb-7 hidden text-[var(--ink-faint)] sm:block">Sites e sistemas com IA para negócios locais</p>
+          <p class="hero-h display text-[clamp(44px,7.4vw,124px)]">
+            <span class="line-mask"><span class="block">Seu cliente já está</span></span>
+            <span class="line-mask"><span class="block">procurando.</span></span>
+            <span class="line-mask"><em class="block text-[var(--ink-soft)]">Só não está te</em></span>
+            <span class="line-mask"><em class="block text-[var(--ink-soft)]">encontrando.</em></span>
+          </p>
+          <p class="hero-copy mt-9 max-w-[430px] text-[17px] leading-[1.6] text-[var(--ink-soft)]">A Allaska cria o site e o sistema com IA por trás dele: quem procura te acha, é atendido na hora e vira cliente. Demo pronta em 48h, e você só paga se aprovar.</p>
+          <div class="hero-actions mt-9 flex flex-wrap items-center gap-x-9 gap-y-5">
+            <span class="inline-block will-change-transform"><a href="https://wa.me/5511940643165?text=Oi%2C%20vim%20pelo%20site%20da%20Allaska%20e%20quero%20ver%20minha%20demo%20gr%C3%A1tis!" class="btn btn-solid"><span class="btn-dot"></span>Ver minha demo grátis</a></span>
+            <a href="#como-funciona" class="link-line text-[15px] font-semibold">Como funciona</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

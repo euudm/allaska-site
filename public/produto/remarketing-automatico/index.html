@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ── SEO: título, description e canonical únicos desta página ── -->
+  <title>Remarketing Automático para Recuperar Clientes — Allaska</title>
+  <meta name="description" content="Sistema de remarketing automático que identifica visitantes do seu site e dispara sequência de follow-up para recuperar clientes que já demonstraram interesse e não fecharam.">
+  <link rel="canonical" href="https://allaska.com.br/produto/remarketing-automatico/">
+
+  <!-- ── Open Graph (mesmo padrão da home) ── -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Allaska">
+  <meta property="og:title" content="Remarketing Automático para Recuperar Clientes — Allaska">
+  <meta property="og:description" content="Sistema que identifica visitantes do seu site e dispara sequência automática de follow-up para trazê-los de volta.">
+  <meta property="og:url" content="https://allaska.com.br/produto/remarketing-automatico/">
+  <meta property="og:image" content="https://allaska.com.br/logo.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--c:#f39c12}
+    html{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.1) transparent}
+    body{background:#080808;color:#f0f0eb;font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+    /* ── NAV ── */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1px solid rgba(255,255,255,.05);background:rgba(8,8,8,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+    .nav-logo{font-size:17px;font-weight:700;letter-spacing:.1em;color:#fff;text-transform:uppercase;text-decoration:none}
+    .nav-back{font-size:12px;font-weight:600;color:rgba(255,255,255,.82);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:8px 20px;text-decoration:none;cursor:pointer;transition:background .18s,color .18s}
+    .nav-back:hover{background:rgba(255,255,255,.15);color:#fff}
+
+    /* ── HERO SPLIT ── */
+    .lp-hero{position:relative;min-height:90vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:linear-gradient(135deg,#180d01 0%,#0d0701 55%,#040610 100%)}
+    .lp-hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 65% 65% at 78% 55%, var(--c)1c 0%, transparent 68%)}
+    .lp-hero-left{position:relative;z-index:2;padding:130px 64px 80px 64px;display:flex;flex-direction:column;justify-content:center}
+    .lp-hero-right{position:relative;z-index:2;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:500px}
+    .lp-hero-sep{position:absolute;left:50%;top:10%;bottom:10%;width:1px;background:rgba(255,255,255,.06);z-index:3}
+
+    .product-badge{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--c);border:1px solid var(--c);border-radius:100px;padding:4px 14px;margin-bottom:28px;opacity:.9;align-self:flex-start}
+    .lp-headline{font-size:clamp(26px,3.8vw,50px);font-weight:800;line-height:1.07;letter-spacing:-.04em;color:#fff;margin-bottom:20px}
+    .lp-headline em{color:#fff;font-style:normal}
+    .lp-subtitle{font-size:15px;color:rgba(255,255,255,.42);line-height:1.72;max-width:480px;margin-bottom:36px}
+    .lp-hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+    /* ── DIVIDER ── */
+    .lp-divider{width:100%;height:1px;background:rgba(255,255,255,.06)}
+
+    /* ── SECTIONS ── */
+    .lp-section{padding:64px 48px;max-width:1100px;margin:0 auto}
+    .section-label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--c);margin-bottom:16px;display:block}
+
+    /* ── PROBLEMA ── */
+    .problema-text p{font-size:15px;color:rgba(255,255,255,.46);line-height:1.85;max-width:680px;margin-bottom:16px}
+    .problema-text p:last-child{margin-bottom:0}
+
+    /* ── STEPS ── */
+    .steps{display:flex;flex-direction:column}
+    .step{display:grid;grid-template-columns:48px 1fr;gap:0 20px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .step:last-child{border-bottom:none}
+    .step-num{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:rgba(255,255,255,.28);flex-shrink:0;margin-top:2px}
+    .step-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+    .step-title{font-size:15px;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:-.02em}
+    .step-time{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--c);border:1px solid var(--c);border-radius:100px;padding:2px 8px;opacity:.8}
+    .step-desc{font-size:13.5px;color:rgba(255,255,255,.38);line-height:1.8}
+
+    /* ── INCLUSO + RESULTADO ── */
+    .details-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+    @media(max-width:768px){.details-grid{grid-template-columns:1fr}}
+    .incluso-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .incluso-list li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:rgba(255,255,255,.62);line-height:1.6}
+    .incluso-list li::before{content:'✓';color:var(--c);font-weight:700;flex-shrink:0;margin-top:1px}
+    .resultado-text{font-size:14px;color:rgba(255,255,255,.42);line-height:1.82;margin-bottom:32px}
+    .investimento-block{padding:22px 24px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.025)}
+    .inv-label{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:14px;display:block}
+
+    /* Pricing dual (vitalício / mensal) */
+    .pricing-dual{display:grid;grid-template-columns:1fr 1px 1fr;align-items:start}
+    .pricing-vsep{background:rgba(255,255,255,.08);margin:0 20px;align-self:stretch;min-height:72px}
+    .po-tag{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--c);margin-bottom:8px;display:block}
+    .po-price{font-size:24px;font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1;margin-bottom:7px}
+    .po-price small{font-size:13px;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:0}
+    .po-note{font-size:11px;color:rgba(255,255,255,.28);line-height:1.55}
+
+    /* ── BOTÕES ── */
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;background:#fff;color:#0a0a0a;font-size:13px;font-weight:700;letter-spacing:.03em;text-decoration:none;border-radius:100px;transition:opacity .2s,transform .2s}
+    .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;background:transparent;color:rgba(255,255,255,.6);font-size:13px;font-weight:600;letter-spacing:.03em;text-decoration:none;border:1px solid rgba(255,255,255,.14);border-radius:100px;transition:border-color .2s,color .2s}
+    .btn-secondary:hover{border-color:rgba(255,255,255,.32);color:rgba(255,255,255,.9)}
+
+    /* ── CTA SECTION ── */
+    .lp-cta-section{padding:64px 48px;max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+    .cta-note{font-size:11px;color:rgba(255,255,255,.22)}
+
+    /* ── COMBO BLOCK ── */
+    .combo-block{margin:0 48px 80px;padding:36px 44px;border:1px solid rgba(255,255,255,.07);border-radius:14px;background:rgba(255,255,255,.025);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+    .combo-block h2{font-size:19px;font-weight:700;color:#fff;letter-spacing:-.03em;margin-bottom:6px}
+    .combo-block p{font-size:13px;color:rgba(255,255,255,.38);line-height:1.6;max-width:460px}
+    .btn-combo{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.78);font-size:12.5px;font-weight:600;letter-spacing:.03em;text-decoration:none;border:1px solid rgba(255,255,255,.14);border-radius:100px;transition:background .2s,color .2s;white-space:nowrap}
+    .btn-combo:hover{background:rgba(255,255,255,.13);color:#fff}
+
+    /* ── FOOTER ── */
+    .lp-footer{padding:28px 48px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .footer-brand{font-size:14px;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.3);text-transform:uppercase}
+    .footer-note{font-size:11px;color:rgba(255,255,255,.18)}
+
+    /* ── VISUAL 3D (pipeline de recuperação) ── */
+    @keyframes spv-slide-u {from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes spv-progress{from{width:0}to{width:var(--pw,80%)}}
+    .slv-wrap{width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:900px){
+      .lp-hero{grid-template-columns:1fr;min-height:auto}
+      .lp-hero-left{padding:120px 32px 48px}
+      .lp-hero-right{min-height:360px;border-top:1px solid rgba(255,255,255,.06)}
+      .lp-hero-sep{display:none}
+      nav{padding:18px 24px}
+      .lp-section{padding:48px 24px}
+      .lp-cta-section{padding:48px 24px}
+      .combo-block{margin:0 24px 60px;padding:28px 24px}
+      .lp-footer{padding:24px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-back" href="/">← Voltar</a>
+  <a class="nav-logo" href="/">Allaska</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="lp-hero">
+  <div class="lp-hero-bg"></div>
+  <div class="lp-hero-sep"></div>
+
+  <div class="lp-hero-left">
+    <span class="product-badge">PRODUTO 04</span>
+    <h1 class="lp-headline">Recupere os clientes que já mostraram interesse <em>— e ainda não fecharam.</em></h1>
+    <p class="lp-subtitle">Sistema que identifica visitantes do seu site e dispara sequência automática de follow-up para trazê-los de volta.</p>
+    <div class="lp-hero-ctas">
+      <a class="btn-primary" href="https://wa.me/5511940643165?text=Ol%C3%A1%2C%20ALLASKA!%20Tenho%20interesse%20no%20Produto%2004%20%E2%80%93%20Remarketing%20Autom%C3%A1tico.%20Pode%20me%20contar%20mais%3F" target="_blank" rel="noopener">Quero recuperar clientes automaticamente →</a>
+      <a class="btn-secondary" href="/combo.html">Monte seu Combo →</a>
+    </div>
+  </div>
+
+  <div class="lp-hero-right">
+    <div class="slv-wrap" style="flex-direction:column;gap:20px;padding:30px 24px">
+      <div style="display:flex;align-items:baseline;gap:10px;animation:spv-slide-u .5s .1s both">
+        <div style="font-size:44px;font-weight:800;color:var(--c);letter-spacing:-.04em">34%</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.35)">taxa de reativação média</div>
+      </div>
+      <div style="width:100%;max-width:360px;display:flex;align-items:center">
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px">
+          <div style="font-size:24px;font-weight:800;color:var(--c);letter-spacing:-.04em;opacity:.7">847</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.32);letter-spacing:.08em">VISITOU</div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px">
+          <div style="font-size:24px;font-weight:800;color:rgba(255,255,255,.5);letter-spacing:-.04em">423</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.32);letter-spacing:.08em">SUMIU</div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px">
+          <div style="font-size:24px;font-weight:800;color:var(--c);letter-spacing:-.04em">291</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.32);letter-spacing:.08em">REATIVADO</div>
+        </div>
+      </div>
+      <div style="width:100%;max-width:360px;background:rgba(10,10,10,.85);border:1px solid var(--c)30;border-radius:12px;padding:16px 20px">
+        <div style="font-size:9px;color:rgba(255,255,255,.32);letter-spacing:.1em;margin-bottom:10px">89 CLIENTES RECUPERADOS ESTE MÊS</div>
+        <div style="height:5px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden">
+          <div style="height:100%;width:34%;background:var(--c);border-radius:100px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="lp-divider"></div>
+
+<!-- ── PROBLEMA ── -->
+<section class="lp-section">
+  <h2 class="section-label">O Problema</h2>
+  <div class="problema-text">
+    <p>A maioria dos clientes não compra na primeira vez. Pesquisam, visitam o site, salvam o perfil — e somem. Sem follow-up automático, você perde entre 60% e 80% das vendas que quase aconteceram — sem saber que perdeu.</p>
+    <p>Essas pessoas já te conhecem. Já demonstraram interesse. Falta apenas o empurrão certo na hora certa.</p>
+  </div>
+</section>
+<div class="lp-divider"></div>
+
+<!-- ── COMO FUNCIONA ── -->
+<section class="lp-section">
+  <h2 class="section-label">Como Funciona — Passo a Passo</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div>
+        <div class="step-head"><h3 class="step-title">Configuração inicial</h3><span class="step-time">único</span></div>
+        <p class="step-desc">A ALLASKA acessa o Google Analytics 4 e configura eventos: clique no WhatsApp, visita à página de preços, tempo na página.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div>
+        <div class="step-head"><h3 class="step-title">Identificação de leads quentes</h3></div>
+        <p class="step-desc">Quem visita preços mas não clica no WhatsApp, ou passa mais de 2 minutos sem contato — é marcado como lead quente automaticamente.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div>
+        <div class="step-head"><h3 class="step-title">Sequência de remarketing</h3></div>
+        <p class="step-desc">Dia 1: Mensagem gentil. Dia 7: Oferta ou caso de uso. Dia 10: Facilidade para fechar. Personalizadas com base no comportamento.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div>
+        <div class="step-head"><h3 class="step-title">Relatório de recuperação</h3></div>
+        <p class="step-desc">Quantos leads identificados, contatados e convertidos. Você enxerga cada venda recuperada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="lp-divider"></div>
+
+<!-- ── INCLUSO + RESULTADO ── -->
+<section class="lp-section">
+  <div class="details-grid">
+    <div>
+      <h2 class="section-label">O que está incluso</h2>
+      <ul class="incluso-list">
+        <li>Integração com Google Analytics 4 do site</li>
+        <li>Identificação automática de visitantes com comportamento de lead quente</li>
+        <li>Sequência de 3 mensagens de remarketing por lead</li>
+        <li>Personalização baseada no comportamento de cada visitante</li>
+        <li>Relatório de recuperação de leads por período</li>
+        <li>Configuração completa pela ALLASKA</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="section-label">Resultado Esperado</h2>
+      <p class="resultado-text">Você recupera clientes que já mostraram interesse sem fazer nada manualmente. Cada venda recuperada é receita que você teria perdido.</p>
+      <div class="investimento-block">
+        <div class="inv-label">Investimento</div>
+        <div class="pricing-dual">
+          <div>
+            <span class="po-tag">Vitalício</span>
+            <div class="po-price">R$ 2.000</div>
+            <div class="po-note">Pagamento único — o sistema é seu para sempre. Sem manutenção inclusa; suporte sob demanda.</div>
+          </div>
+          <div class="pricing-vsep"></div>
+          <div>
+            <span class="po-tag">Mensal</span>
+            <div class="po-price">R$ 750<small>/mês</small></div>
+            <div class="po-note">Sistema seu para sempre — manutenção, atualizações e suporte inclusos todo mês.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="lp-divider"></div>
+
+<!-- ── CTA ── -->
+<section class="lp-cta-section">
+  <div class="cta-row">
+    <a class="btn-primary" href="https://wa.me/5511940643165?text=Ol%C3%A1%2C%20ALLASKA!%20Tenho%20interesse%20no%20Produto%2004%20%E2%80%93%20Remarketing%20Autom%C3%A1tico.%20Pode%20me%20contar%20mais%3F" target="_blank" rel="noopener">Quero recuperar clientes automaticamente →</a>
+    <a class="btn-secondary" href="/combo.html">Monte seu Combo →</a>
+  </div>
+  <p class="cta-note">Ao clicar, você será direcionado ao WhatsApp da ALLASKA.</p>
+</section>
+
+<!-- ── COMBO BLOCK ── -->
+<div class="combo-block">
+  <div>
+    <h2>Não sabe por onde começar? Monte seu combo personalizado.</h2>
+    <p>Responda 3 perguntas rápidas e a ALLASKA monta o pacote ideal para o seu negócio.</p>
+  </div>
+  <a class="btn-combo" href="/combo.html">Montar meu Combo →</a>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="lp-footer">
+  <span class="footer-brand">Allaska</span>
+  <span class="footer-note">© 2026 Allaska · Todos os direitos reservados</span>
+</footer>
+
+</body>
+</html>

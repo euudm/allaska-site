@@ -1,0 +1,4 @@
+# Migração de páginas de produto (query string) para URLs limpas.
+# Adicionar uma linha por produto migrado, seguindo este padrão.
+/produto.html  id=04  /produto/remarketing-automatico/  301!
+/produto.html  id=01  /produto/criacao-de-sites/  301!

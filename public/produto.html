@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Allaska — Produto</title>
+  <meta name="description" content="Soluções de IA para empresas B2B: sites, prospecção automática, conteúdo, remarketing e atendimento inteligente. Implementamos em dias, não meses.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Allaska">
+  <meta property="og:title" content="Allaska — Produto">
+  <meta property="og:description" content="Soluções de IA para empresas B2B: sites, prospecção automática, conteúdo, remarketing e atendimento inteligente.">
+  <link rel="canonical" href="https://allaska.com.br/produto.html">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--c:#7c5cff}
+    html{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.1) transparent}
+    body{background:#080808;color:#f0f0eb;font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+    /* ── NAV ── */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 48px;border-bottom:1px solid rgba(255,255,255,.05);background:rgba(8,8,8,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+    .nav-logo{font-size:17px;font-weight:700;letter-spacing:.1em;color:#fff;text-transform:uppercase;text-decoration:none}
+    .nav-back{font-size:12px;font-weight:600;color:rgba(255,255,255,.82);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:8px 20px;text-decoration:none;cursor:pointer;transition:background .18s,color .18s}
+    .nav-back:hover{background:rgba(255,255,255,.15);color:#fff}
+
+    /* ── HERO SPLIT ── */
+    .lp-hero{position:relative;min-height:90vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+    .lp-hero-bg{position:absolute;inset:0;z-index:0}
+    .lp-hero-left{position:relative;z-index:2;padding:130px 64px 80px 64px;display:flex;flex-direction:column;justify-content:center}
+    .lp-hero-right{position:relative;z-index:2;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:500px}
+    .lp-hero-sep{position:absolute;left:50%;top:10%;bottom:10%;width:1px;background:rgba(255,255,255,.06);z-index:3}
+
+    .product-badge{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--c);border:1px solid var(--c);border-radius:100px;padding:4px 14px;margin-bottom:28px;opacity:.9;align-self:flex-start}
+    .lp-headline{font-size:clamp(26px,3.8vw,50px);font-weight:800;line-height:1.07;letter-spacing:-.04em;color:#fff;margin-bottom:20px}
+    .lp-headline em{color:#fff;font-style:normal}
+    .lp-subtitle{font-size:15px;color:rgba(255,255,255,.42);line-height:1.72;max-width:480px;margin-bottom:36px}
+    .lp-hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+    /* ── DIVIDER ── */
+    .lp-divider{width:100%;height:1px;background:rgba(255,255,255,.06)}
+
+    /* ── SECTIONS ── */
+    .lp-section{padding:64px 48px;max-width:1100px;margin:0 auto}
+    .section-label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--c);margin-bottom:16px;display:block}
+
+    /* ── PROBLEMA ── */
+    .problema-text p{font-size:15px;color:rgba(255,255,255,.46);line-height:1.85;max-width:680px;margin-bottom:16px}
+    .problema-text p:last-child{margin-bottom:0}
+
+    /* ── STEPS ── */
+    .steps{display:flex;flex-direction:column}
+    .step{display:grid;grid-template-columns:48px 1fr;gap:0 20px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .step:last-child{border-bottom:none}
+    .step-num{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:rgba(255,255,255,.28);flex-shrink:0;margin-top:2px}
+    .step-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+    .step-title{font-size:15px;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:-.02em}
+    .step-time{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--c);border:1px solid var(--c);border-radius:100px;padding:2px 8px;opacity:.8}
+    .step-desc{font-size:13.5px;color:rgba(255,255,255,.38);line-height:1.8}
+
+    /* ── INCLUSO + RESULTADO ── */
+    .details-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+    @media(max-width:768px){.details-grid{grid-template-columns:1fr}}
+    .incluso-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .incluso-list li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:rgba(255,255,255,.62);line-height:1.6}
+    .incluso-list li::before{content:'✓';color:var(--c);font-weight:700;flex-shrink:0;margin-top:1px}
+    .resultado-text{font-size:14px;color:rgba(255,255,255,.42);line-height:1.82;margin-bottom:32px}
+    .investimento-block{padding:22px 24px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.025)}
+    .inv-label{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:14px;display:block}
+
+    /* Pricing dual (vitalício / mensal) */
+    .pricing-dual{display:grid;grid-template-columns:1fr 1px 1fr;align-items:start}
+    .pricing-vsep{background:rgba(255,255,255,.08);margin:0 20px;align-self:stretch;min-height:72px}
+    .po-tag{font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--c);margin-bottom:8px;display:block}
+    .po-price{font-size:24px;font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1;margin-bottom:7px}
+    .po-price small{font-size:13px;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:0}
+    .po-note{font-size:11px;color:rgba(255,255,255,.28);line-height:1.55}
+
+    /* Pricing tiers (produto 01) */
+    .pricing-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .pt{position:relative;padding:14px 16px;border:1px solid rgba(255,255,255,.08);border-radius:10px;background:rgba(255,255,255,.02);cursor:default;transition:border-color .2s,background .2s}
+    .pt:hover{border-color:var(--c);background:rgba(255,255,255,.04)}
+    .pt-name{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:8px;display:block}
+    .pt-price{font-size:18px;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.2}
+
+    /* Tooltip hover */
+    .pt-tooltip{
+      position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(4px);
+      width:220px;background:#1a1a1a;border:1px solid rgba(255,255,255,.12);border-radius:10px;
+      padding:14px 16px;font-size:12px;line-height:1.6;color:rgba(255,255,255,.7);
+      opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;
+      z-index:10;white-space:normal;
+    }
+    .pt-tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);
+      border:6px solid transparent;border-top-color:#1a1a1a}
+    .pt:hover .pt-tooltip{opacity:1;transform:translateX(-50%) translateY(0)}
+
+    /* ── BOTÕES ── */
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;background:#fff;color:#0a0a0a;font-size:13px;font-weight:700;letter-spacing:.03em;text-decoration:none;border-radius:100px;transition:opacity .2s,transform .2s}
+    .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;background:transparent;color:rgba(255,255,255,.6);font-size:13px;font-weight:600;letter-spacing:.03em;text-decoration:none;border:1px solid rgba(255,255,255,.14);border-radius:100px;transition:border-color .2s,color .2s}
+    .btn-secondary:hover{border-color:rgba(255,255,255,.32);color:rgba(255,255,255,.9)}
+
+    /* ── CTA SECTION ── */
+    .lp-cta-section{padding:64px 48px;max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+    .cta-note{font-size:11px;color:rgba(255,255,255,.22)}
+
+    /* ── COMBO BLOCK ── */
+    .combo-block{margin:0 48px 80px;padding:36px 44px;border:1px solid rgba(255,255,255,.07);border-radius:14px;background:rgba(255,255,255,.025);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+    .combo-block h3{font-size:19px;font-weight:700;color:#fff;letter-spacing:-.03em;margin-bottom:6px}
+    .combo-block p{font-size:13px;color:rgba(255,255,255,.38);line-height:1.6;max-width:460px}
+    .btn-combo{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.78);font-size:12.5px;font-weight:600;letter-spacing:.03em;text-decoration:none;border:1px solid rgba(255,255,255,.14);border-radius:100px;transition:background .2s,color .2s;white-space:nowrap}
+    .btn-combo:hover{background:rgba(255,255,255,.13);color:#fff}
+
+    /* ── FOOTER ── */
+    .lp-footer{padding:28px 48px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .footer-brand{font-size:14px;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.3);text-transform:uppercase}
+    .footer-note{font-size:11px;color:rgba(255,255,255,.18)}
+
+    /* ════════════════════════════════════════════════
+       ANIMAÇÕES DOS VISUAIS 3D
+    ════════════════════════════════════════════════ */
+    @keyframes spv-float   {0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes spv-float2  {0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    @keyframes spv-float3d {0%,100%{transform:perspective(700px) rotateX(8deg) rotateY(-11deg) translateY(0)}50%{transform:perspective(700px) rotateX(6deg) rotateY(-14deg) translateY(-10px)}}
+    @keyframes spv-slide-r {from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes spv-slide-u {from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes spv-bubble  {from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes spv-line-in {from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+    @keyframes spv-node-p  {0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.8}50%{transform:translate(-50%,-50%) scale(1.5);opacity:1}}
+    @keyframes spv-star-f  {to{opacity:1;filter:none}}
+    @keyframes spv-progress{from{width:0}to{width:var(--pw,80%)}}
+    @keyframes spv-pulse-r {0%{transform:translate(-50%,-50%) scale(1);opacity:.75}100%{transform:translate(-50%,-50%) scale(2.6);opacity:0}}
+    @keyframes spv-sweep   {from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    @keyframes spv-orbit   {from{transform:translate(-50%,-50%) rotate(0deg) translateX(52px)}to{transform:translate(-50%,-50%) rotate(360deg) translateX(52px)}}
+
+    /* visual wrapper */
+    .slv-wrap{width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center}
+    /* browser */
+    .slv-browser{width:82%;max-width:320px;border:1px solid rgba(255,255,255,.1);border-radius:10px;overflow:hidden;background:rgba(255,255,255,.025)}
+    .slv-brow{display:flex;align-items:center;gap:8px;padding:8px 12px}
+    .slv-bdots{display:flex;gap:5px}
+    .slv-bdots span{width:8px;height:8px;border-radius:50%;display:block}
+    .slv-burl{flex:1;height:18px;border-radius:100px;display:flex;align-items:center;padding:0 10px;font-size:7.5px;color:rgba(255,255,255,.25);letter-spacing:.04em}
+    .slv-bcontent{padding:12px 16px;display:flex;flex-direction:column;gap:7px}
+    /* posts */
+    .slv-posts{display:flex;flex-direction:column;gap:10px;width:78%;max-width:270px}
+    .slv-post{border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);opacity:0;animation:spv-bubble .4s ease var(--pd,0s) forwards}
+    .slv-post-img{height:70px}
+    .slv-post-body{padding:8px 12px;display:flex;flex-direction:column;gap:5px}
+    /* chat */
+    .slv-chat{width:88%;max-width:290px;display:flex;flex-direction:column;gap:8px}
+    .slv-msg{padding:8px 12px;border-radius:14px;font-size:11px;color:rgba(255,255,255,.62);line-height:1.5;opacity:0;animation:spv-bubble .4s ease var(--md,0s) forwards;max-width:88%}
+    .slv-msg.inp{align-self:flex-start;border-bottom-left-radius:3px}
+    .slv-msg.out{align-self:flex-end;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-bottom-right-radius:3px}
+    /* radar */
+    .slv-radar{position:relative;width:210px;height:210px}
+    .slv-rring{position:absolute;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+    .slv-rsweep{position:absolute;top:50%;left:50%;height:1px;transform-origin:left center;animation:spv-sweep 2.5s linear infinite}
+    .slv-rdot{position:absolute;width:7px;height:7px;border-radius:50%;transform:translate(-50%,-50%)}
+    /* doc */
+    .slv-doc{width:78%;max-width:250px;border:1px solid rgba(255,255,255,.1);border-radius:6px;background:rgba(255,255,255,.03);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+    .slv-check{display:flex;align-items:center;gap:8px;opacity:0;animation:spv-bubble .3s ease var(--cd,0s) forwards}
+    .slv-check-box{width:14px;height:14px;border-radius:3px;flex-shrink:0;border:1.5px solid;display:flex;align-items:center;justify-content:center}
+    .slv-check-lbl{font-size:10px;color:rgba(255,255,255,.45)}
+    /* stars */
+    .slv-stars-big{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .slv-stars-row{display:flex;gap:10px}
+    .slv-star-big{font-size:30px;opacity:0;animation:spv-star-f .5s ease var(--std,0s) forwards}
+    .slv-rating{font-size:52px;font-weight:800;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+    .slv-reviews{font-size:11px;color:rgba(255,255,255,.28);letter-spacing:.06em}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:900px){
+      .lp-hero{grid-template-columns:1fr;min-height:auto}
+      .lp-hero-left{padding:120px 32px 48px}
+      .lp-hero-right{min-height:360px;border-top:1px solid rgba(255,255,255,.06)}
+      .lp-hero-sep{display:none}
+      nav{padding:18px 24px}
+      .lp-section{padding:48px 24px}
+      .lp-cta-section{padding:48px 24px}
+      .combo-block{margin:0 24px 60px;padding:28px 24px}
+      .lp-footer{padding:24px}
+    }
+  </style>
+  <script>
+    function navBack() {
+      if (window.opener && !window.opener.closed) {
+        window.close();
+        setTimeout(() => { window.location.href = 'index.html'; }, 300);
+      } else if (history.length > 1) {
+        history.back();
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+</head>
+<body>
+
+<nav>
+  <a class="nav-back" href="javascript:void(0)" onclick="navBack()">← Voltar</a>
+  <a class="nav-logo" href="index.html">Allaska</a>
+</nav>
+
+<div id="lp-root"></div>
+
+<script>
+const WA = 'https://wa.me/5511940643165?text=';
+const COMBO_MSG = encodeURIComponent('Olá, ALLASKA! Quero montar um combo personalizado para o meu negócio. Pode me ajudar?');
+
+/* ── Helpers glass ─────────────────────────────────── */
+const G  = (c,x='') => `background:rgba(10,10,10,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid ${c}30;${x}`;
+const G2 = (x='')   => `background:rgba(255,255,255,.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);${x}`;
+
+/* ── Backgrounds temáticos ─────────────────────────── */
+const BG = [
+  {bg:'linear-gradient(135deg,#0a0a0a 0%,#080808 55%,#060606 100%)',glow:'at 80% 40%'},
+  {bg:'linear-gradient(135deg,#0a0a0a 0%,#080808 55%,#060606 100%)',glow:'at 80% 50%'},
+  {bg:'linear-gradient(135deg,#0a0a0a 0%,#080808 55%,#060606 100%)',glow:'at 75% 40%'},
+  {bg:'linear-gradient(135deg,#0a0a0a 0%,#080808 55%,#060606 100%)',glow:'at 78% 55%'},
+  {bg:'linear-gradient(135deg,#0a0a0a 0%,#080808 55%,#060606 100%)',glow:'at 80% 45%'},
+  {bg:'linear-gradient(135deg,#0a0a0a 0%,#080808 55%,#060606 100%)',glow:'at 80% 50%'},
+  {bg:'linear-gradient(135deg,#0a0a0a 0%,#080808 55%,#060606 100%)',glow:'at 78% 40%'},
+  {bg:'linear-gradient(135deg,#0a0a0a 0%,#080808 55%,#060606 100%)',glow:'at 76% 55%'},
+];
+
+/* ── Visuais 3D por produto ────────────────────────── */
+const VIS = [
+  // 01 Sites — Browser 3D flutuando
+  c=>`<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px 24px;position:relative">
+    <div style="animation:spv-float3d 5s ease-in-out infinite;position:relative;flex-shrink:0">
+      <div style="width:300px;${G(c,'border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 60px '+c+'28;overflow:hidden')}">
+        <div style="padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.03)">
+          <span style="width:8px;height:8px;border-radius:50%;background:#e74c3c60;display:block"></span>
+          <span style="width:8px;height:8px;border-radius:50%;background:#f39c1260;display:block"></span>
+          <span style="width:8px;height:8px;border-radius:50%;background:#3ecf5e60;display:block"></span>
+          <div style="flex:1;background:rgba(255,255,255,.06);border-radius:100px;padding:3px 10px;font-size:7.5px;color:rgba(255,255,255,.28);margin-left:4px">seusite.com.br</div>
+        </div>
+        <div style="height:62px;background:linear-gradient(135deg,${c}22,${c}06);border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;padding:0 16px;animation:spv-line-in .5s .2s both">
+          <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,.68)">Seu Negócio · Premium</div>
+        </div>
+        <div style="padding:12px 16px;display:flex;flex-direction:column;gap:7px">
+          ${[65,82,48,72,56].map((w,i)=>`<div style="height:7px;width:${w}%;background:rgba(255,255,255,.07);border-radius:3px;transform-origin:left;animation:spv-line-in .4s ${.3+i*.1}s both"></div>`).join('')}
+          <div style="display:flex;gap:8px;margin-top:4px">
+            ${[['CTA Principal',true],['Saiba mais',false]].map(([l,p])=>`<div style="padding:6px 12px;background:${p?c+'30':'rgba(255,255,255,.04)'};border-radius:100px;border:1px solid ${p?c+'55':'rgba(255,255,255,.06)'};font-size:7.5px;color:${p?c:'rgba(255,255,255,.25)'};animation:spv-line-in .4s .75s both">${l}</div>`).join('')}
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;top:-32px;right:-62px;${G(c,'border-radius:12px;padding:12px 16px;white-space:nowrap')};animation:spv-slide-r .5s .9s both,spv-float2 4s ease-in-out 1.5s infinite">
+        <div style="font-size:24px;font-weight:800;color:${c};letter-spacing:-.04em">+312%</div>
+        <div style="font-size:8.5px;color:rgba(255,255,255,.35);margin-top:1px">visitantes orgânicos</div>
+      </div>
+      <div style="position:absolute;bottom:-32px;left:-56px;${G2('border-radius:12px;padding:12px 16px;white-space:nowrap')};animation:spv-slide-r .5s 1.1s both,spv-float 5s ease-in-out 2s infinite">
+        <div style="font-size:24px;font-weight:800;color:#3ecf5e;letter-spacing:-.04em">#1</div>
+        <div style="font-size:8.5px;color:rgba(255,255,255,.35);margin-top:1px">Google · barbearia SP</div>
+      </div>
+    </div>
+  </div>`,
+
+  // 02 Prospecção — mapa de leads
+  c=>`<div style="width:100%;height:100%;position:relative;overflow:hidden">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.35" viewBox="0 0 340 260" preserveAspectRatio="xMidYMid slice">
+      ${Array.from({length:56},(_,i)=>{const x=18+(i%8)*40,y=18+Math.floor(i/8)*34,h=[3,8,11,18,22,27,31,36,42,49].includes(i);return `<circle cx="${x}" cy="${y}" r="${h?5:2.2}" fill="${h?c:'rgba(255,255,255,.18)'}"/>`}).join('')}
+    </svg>
+    <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 340 260" preserveAspectRatio="xMidYMid slice">
+      ${[[60,30],[290,46],[40,160],[310,180],[110,210],[200,55],[260,130],[80,100]].map(([x,y])=>`<line x1="170" y1="130" x2="${x}" y2="${y}" stroke="${c}55" stroke-width="1" stroke-dasharray="5 4"/>`).join('')}
+    </svg>
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">
+      <div style="width:22px;height:22px;border-radius:50%;background:${c};box-shadow:0 0 28px ${c},0 0 56px ${c}50"></div>
+      <div style="position:absolute;top:50%;left:50%;width:44px;height:44px;border-radius:50%;border:2px solid ${c}50;transform:translate(-50%,-50%);animation:spv-pulse-r 2.2s ease-out infinite"></div>
+      <div style="position:absolute;top:50%;left:50%;width:44px;height:44px;border-radius:50%;border:2px solid ${c}30;transform:translate(-50%,-50%);animation:spv-pulse-r 2.2s ease-out .8s infinite"></div>
+    </div>
+    <div style="position:absolute;bottom:20px;right:18px;${G(c,'border-radius:14px;padding:14px 18px')};animation:spv-slide-u .5s .5s both;min-width:170px">
+      <div style="font-size:8.5px;color:rgba(255,255,255,.28);letter-spacing:.1em;margin-bottom:10px">SCORE DE OPORTUNIDADE</div>
+      ${[['Bravura Barbearia','94'],['Solène Estética','88'],["Garcia Cort's",'76']].map(([n,s])=>`<div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:10px;color:rgba(255,255,255,.52)">${n}</span><span style="font-size:10px;color:${c};font-weight:700">${s}</span></div>`).join('')}
+    </div>
+    <div style="position:absolute;top:22px;right:18px;${G2('border-radius:10px;padding:10px 14px;white-space:nowrap')};animation:spv-slide-u .5s .9s both">
+      <div style="font-size:8.5px;color:rgba(255,255,255,.35)">📲 127 abordagens enviadas hoje</div>
+    </div>
+  </div>`,
+
+  // 03 Conteúdo — phone 3D Instagram
+  c=>`<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px 24px;position:relative">
+    <div style="animation:spv-float 5s ease-in-out infinite;position:relative">
+      <div style="width:168px;${G(c,'border-radius:28px;box-shadow:0 34px 90px rgba(0,0,0,.65),0 0 50px '+c+'28;overflow:hidden;transform:perspective(900px) rotateY(-14deg) rotateX(5deg)')}">
+        <div style="height:12px;background:rgba(255,255,255,.03)"></div>
+        <div style="padding:7px 12px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:7px">
+          <div style="width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,${c}60,${c}20);border:1.5px solid ${c}55"></div>
+          <div><div style="font-size:8px;color:rgba(255,255,255,.65);font-weight:600">seunegocio</div><div style="font-size:6.5px;color:${c}">✦ IA gerando...</div></div>
+        </div>
+        <div style="height:150px;background:linear-gradient(135deg,${c}22,${c}06);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.82);text-align:center;line-height:1.3;animation:spv-slide-u .5s .3s both">5 dicas que sua concorrência<br>não sabe</div>
+          <div style="font-size:7px;color:rgba(255,255,255,.42);text-align:center;animation:spv-slide-u .5s .5s both">Como sair na frente sem gastar com anúncios</div>
+          <div style="position:absolute;bottom:7px;right:10px;font-size:7px;color:${c};animation:spv-slide-u .4s .8s both">✦ gerado por IA</div>
+        </div>
+        <div style="padding:9px 12px;display:flex;flex-direction:column;gap:5px">
+          ${[88,68,52].map((w,i)=>`<div style="height:5px;width:${w}%;background:rgba(255,255,255,.07);border-radius:3px;transform-origin:left;animation:spv-line-in .4s ${.9+i*.1}s both"></div>`).join('')}
+          <div style="display:flex;gap:8px;margin-top:3px"><span style="font-size:8px;color:${c}">♥ 4.2k</span><span style="font-size:8px;color:rgba(255,255,255,.28)">💬 128</span></div>
+        </div>
+      </div>
+      <div style="position:absolute;top:-24px;right:-66px;${G(c,'border-radius:12px;padding:12px 16px;white-space:nowrap')};animation:spv-slide-r .5s .7s both,spv-float2 4s ease-in-out 1.2s infinite">
+        <div style="font-size:22px;font-weight:800;color:${c};letter-spacing:-.04em">0 min</div>
+        <div style="font-size:8px;color:rgba(255,255,255,.35);margin-top:1px">design necessário</div>
+      </div>
+      <div style="position:absolute;bottom:-24px;left:-54px;${G2('border-radius:12px;padding:12px 16px;white-space:nowrap')};animation:spv-slide-r .5s .9s both,spv-float 5s ease-in-out 2s infinite">
+        <div style="font-size:22px;font-weight:800;color:rgba(255,255,255,.72);letter-spacing:-.04em">30</div>
+        <div style="font-size:8px;color:rgba(255,255,255,.35);margin-top:1px">posts por mês</div>
+      </div>
+    </div>
+  </div>`,
+
+  // 04 Remarketing — pipeline de recuperação
+  c=>`<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:30px 24px">
+    <div style="display:flex;align-items:baseline;gap:10px;animation:spv-slide-u .5s .1s both">
+      <div style="font-size:44px;font-weight:800;color:${c};letter-spacing:-.04em">34%</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.35)">taxa de reativação média</div>
+    </div>
+    <div style="width:100%;max-width:360px;display:flex;align-items:center">
+      ${[['Visitou','847',c+'70'],['Sumiu','423','rgba(255,255,255,.18)'],['Reativado','291',c]].map(([l,n,col],i)=>`
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;animation:spv-slide-u .5s ${i*.18}s both">
+          <div style="font-size:24px;font-weight:800;color:${col};letter-spacing:-.04em">${n}</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.32);letter-spacing:.08em">${l.toUpperCase()}</div>
+          <div style="width:34px;height:34px;border-radius:50%;background:${col==='rgba(255,255,255,.18)'?'rgba(255,255,255,.05)':col+'22'};border:1.5px solid ${col};display:flex;align-items:center;justify-content:center;font-size:14px">${['👤','✗','✓'][i]}</div>
+        </div>
+        ${i<2?`<div style="flex:0 0 32px;display:flex;flex-direction:column;align-items:center;margin-bottom:20px">
+          <div style="height:1.5px;width:100%;background:rgba(255,255,255,.08);position:relative">
+            <div style="position:absolute;inset:0;background:${c};transform-origin:left;animation:spv-line-in .6s ${.6+i*.2}s both"></div>
+          </div>
+          <div style="font-size:12px;color:${c};animation:spv-slide-u .4s ${.8+i*.2}s both">→</div>
+        </div>`:''}`).join('')}
+    </div>
+    <div style="width:100%;max-width:360px;${G(c,'border-radius:12px;padding:16px 20px')};animation:spv-slide-u .5s .7s both">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <div style="font-size:9px;color:rgba(255,255,255,.32);letter-spacing:.1em">89 clientes recuperados este mês</div>
+      </div>
+      <div style="height:5px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden">
+        <div style="height:100%;width:0;background:${c};border-radius:100px;animation:spv-progress 1.5s cubic-bezier(.16,1,.3,1) .9s forwards;--pw:34%"></div>
+      </div>
+    </div>
+  </div>`,
+
+  // 05 Chatbot — split WhatsApp + Google Stars
+  c=>`<div style="width:100%;height:100%;display:flex;gap:14px;align-items:center;justify-content:center;padding:28px 20px">
+    <div style="flex:1;max-width:210px;${G(c,'border-radius:16px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.55)')};animation:spv-slide-r .5s .1s both">
+      <div style="padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:9px;background:${c}12">
+        <div style="width:26px;height:26px;border-radius:50%;background:${c}40;border:1.5px solid ${c};display:flex;align-items:center;justify-content:center;font-size:13px">🤖</div>
+        <div><div style="font-size:10px;color:rgba(255,255,255,.72);font-weight:600">Bot Allaska</div><div style="font-size:7.5px;color:${c}">online · 24h</div></div>
+      </div>
+      <div style="padding:12px 10px;display:flex;flex-direction:column;gap:8px">
+        <div style="padding:7px 11px;background:rgba(255,255,255,.06);border-radius:11px 11px 11px 3px;font-size:10px;color:rgba(255,255,255,.55);opacity:0;animation:spv-bubble .35s .4s forwards;max-width:90%">Oi! Quanto custa um corte?</div>
+        <div style="padding:7px 11px;background:${c}18;border:1px solid ${c}28;border-radius:11px 11px 3px 11px;font-size:10px;color:rgba(255,255,255,.68);opacity:0;animation:spv-bubble .35s .9s forwards;align-self:flex-end;max-width:90%">Corte R$40! Horário hoje às 14h 😊</div>
+        <div style="padding:7px 11px;background:rgba(255,255,255,.06);border-radius:11px 11px 11px 3px;font-size:10px;color:rgba(255,255,255,.55);opacity:0;animation:spv-bubble .35s 1.4s forwards">14h perfeito!</div>
+        <div style="padding:7px 11px;background:${c}18;border:1px solid ${c}28;border-radius:11px 11px 3px 11px;font-size:10px;color:rgba(255,255,255,.68);opacity:0;animation:spv-bubble .35s 1.9s forwards;align-self:flex-end">Confirmado ✅</div>
+      </div>
+    </div>
+    <div style="flex:1;max-width:160px;display:flex;flex-direction:column;gap:12px;animation:spv-slide-r .5s .4s both">
+      <div style="${G2('border-radius:16px;padding:18px 16px;display:flex;flex-direction:column;align-items:center;gap:7px')}">
+        <div style="font-size:9.5px;color:rgba(255,255,255,.3);letter-spacing:.08em">GOOGLE</div>
+        <div style="font-size:40px;font-weight:800;color:${c};letter-spacing:-.04em">4.9</div>
+        <div style="display:flex;gap:4px">${[0,.12,.24,.36,.48].map(d=>`<span style="font-size:16px;color:${c};opacity:0;animation:spv-star-f .4s ease ${.6+d}s forwards">★</span>`).join('')}</div>
+        <div style="font-size:8px;color:rgba(255,255,255,.28);text-align:center">1.240 avaliações</div>
+      </div>
+      <div style="${G(c,'border-radius:11px;padding:11px 14px;text-align:center')};animation:spv-slide-u .5s 1.2s both">
+        <div style="font-size:8.5px;color:rgba(255,255,255,.38);line-height:1.5">Avaliação solicitada automaticamente pós-atendimento</div>
+      </div>
+    </div>
+  </div>`,
+
+  // 06 Rastreamento — intelligence dashboard
+  c=>`<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 20px;gap:12px">
+    <div style="width:100%;max-width:380px;${G(c,'border-radius:14px;padding:16px 20px')};animation:spv-slide-u .5s .1s both">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div><div style="font-size:9px;color:${c};letter-spacing:.12em;font-weight:700;margin-bottom:4px">RELATÓRIO SEMANAL</div><div style="font-size:11px;color:rgba(255,255,255,.65)">7 concorrentes monitorados</div></div>
+        <div style="font-size:8.5px;color:rgba(255,255,255,.28);text-align:right">Seg · 08:00<br><span style="color:${c}">✓ entregue</span></div>
+      </div>
+    </div>
+    <div style="width:100%;max-width:380px;${G2('border-radius:12px;overflow:hidden')};animation:spv-slide-u .5s .3s both">
+      <div style="padding:9px 16px;border-bottom:1px solid rgba(255,255,255,.05);display:grid;grid-template-columns:1fr 70px 90px;gap:4px">
+        ${['Concorrente','Nota','Novidade'].map(h=>`<div style="font-size:8px;color:rgba(255,255,255,.25);letter-spacing:.08em">${h}</div>`).join('')}
+      </div>
+      ${[['Bravura SP','4.7','🟡 2 posts'],['Barber King','4.2','🔴 Promoção'],["Garcia Cort's",'3.9','⚪ Sem ativ.']].map(([n,r,nw],i)=>`
+        <div style="padding:9px 16px;border-bottom:1px solid rgba(255,255,255,.04);display:grid;grid-template-columns:1fr 70px 90px;gap:4px;animation:spv-slide-u .4s ${.5+i*.14}s both">
+          <div style="font-size:10px;color:rgba(255,255,255,.52)">${n}</div>
+          <div style="font-size:10px;color:${parseFloat(r)>=4.5?'#3ecf5e':'rgba(255,255,255,.4)'}">★ ${r}</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.38)">${nw}</div>
+        </div>`).join('')}
+    </div>
+    <div style="width:100%;max-width:380px;background:${c}12;border:1px solid ${c}30;border-radius:10px;padding:12px 16px;animation:spv-slide-u .5s .9s both">
+      <div style="font-size:9px;color:rgba(255,255,255,.58);line-height:1.6">💡 <strong style="color:${c}">Bravura SP</strong> lançou promoção. Você está 0.2 pontos à frente — hora de reagir.</div>
+    </div>
+  </div>`,
+
+  // 07 Proposta — pipeline end-to-end
+  c=>`<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px 20px">
+    <div style="display:flex;align-items:baseline;gap:10px;animation:spv-slide-u .5s .1s both">
+      <div style="font-size:48px;font-weight:800;color:${c};letter-spacing:-.04em">47s</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.35)">para gerar proposta completa</div>
+    </div>
+    <div style="width:100%;max-width:370px;display:flex;flex-direction:column;gap:8px">
+      ${[['✍️','Formulário preenchido','1 minuto','done'],['📄','Proposta PDF gerada','automático',c],['📤','Enviada via WhatsApp + Email','imediato',c],['⏱️','Follow-up se sem resposta','48h depois','rgba(255,255,255,.28)']].map(([ic,st,dt,col],i)=>`
+        <div style="display:flex;align-items:center;gap:12px;padding:11px 16px;background:rgba(22,2,2,.75);border:1px solid ${col==='done'||col==='rgba(255,255,255,.28)'?'rgba(255,255,255,.09)':col+'40'};border-radius:10px;animation:spv-slide-u .4s ${.3+i*.17}s both">
+          <div style="font-size:16px;flex-shrink:0">${ic}</div>
+          <div style="flex:1"><div style="font-size:10px;color:rgba(255,255,255,.72);font-weight:500">${st}</div><div style="font-size:8px;color:rgba(255,255,255,.3)">${dt}</div></div>
+          ${col!=='done'&&col!=='rgba(255,255,255,.28)'?`<div style="font-size:10px;color:${col};font-weight:600">→</div>`:col==='done'?`<div style="font-size:10px;color:rgba(255,255,255,.3)">✓</div>`:''}
+        </div>`).join('')}
+    </div>
+    <div style="width:100%;max-width:370px;display:flex;align-items:center;gap:12px;animation:spv-slide-u .5s .9s both">
+      <div style="font-size:9.5px;color:rgba(255,255,255,.3);white-space:nowrap">Taxa de fechamento</div>
+      <div style="flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden">
+        <div style="height:100%;width:0;background:${c};border-radius:100px;animation:spv-progress 1.4s cubic-bezier(.16,1,.3,1) 1s forwards;--pw:68%"></div>
+      </div>
+      <div style="font-size:14px;font-weight:800;color:${c};white-space:nowrap">68%</div>
+    </div>
+  </div>`,
+
+  // 08 Reputação — live monitoring
+  c=>`<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px 20px">
+    <div style="display:flex;align-items:baseline;gap:14px;animation:spv-slide-u .5s .1s both">
+      <div style="font-size:56px;font-weight:800;color:${c};letter-spacing:-.04em">4.9</div>
+      <div style="display:flex;flex-direction:column;gap:5px">
+        <div style="display:flex;gap:3px">${[0,.12,.24,.36,.48].map(d=>`<span style="font-size:18px;color:${c};opacity:0;animation:spv-star-f .4s ease ${.3+d}s forwards">★</span>`).join('')}</div>
+        <div style="font-size:9px;color:rgba(255,255,255,.3)">1.240 avaliações · Google</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;animation:spv-slide-u .5s .5s both">
+      ${[['Google','✓'],['Instagram','✓'],['Reclame Aqui','✓']].map(([nm,s])=>`<div style="padding:5px 12px;background:rgba(255,255,255,.04);border:1px solid ${c}40;border-radius:100px;font-size:8.5px;color:rgba(255,255,255,.5);white-space:nowrap"><span style="color:${c}">${s}</span> ${nm}</div>`).join('')}
+    </div>
+    <div style="width:100%;max-width:360px;${G2('border-radius:12px;overflow:hidden')};animation:spv-slide-u .5s .7s both">
+      <div style="padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.06)"><div style="font-size:8.5px;color:rgba(255,255,255,.25);letter-spacing:.1em">🔴 ALERTA · Avaliação negativa detectada</div></div>
+      <div style="padding:10px 14px;font-size:9.5px;color:rgba(255,255,255,.45);line-height:1.5;border-bottom:1px solid rgba(255,255,255,.04)">"Atendimento demorado, não recomendo." · 1 estrela</div>
+      <div style="padding:9px 14px;background:${c}12;font-size:9px;color:${c};animation:spv-slide-u .5s 1.2s both">↩ Resposta gerada e enviada em 4 min</div>
+    </div>
+    <div style="width:100%;max-width:360px;${G(c,'border-radius:10px;padding:10px 14px')};animation:spv-slide-u .5s 1.0s both">
+      <div style="font-size:9px;color:rgba(255,255,255,.4)">★ Nova avaliação 5 estrelas → sugestão de compartilhar nas redes</div>
+    </div>
+  </div>`,
+];
+
+/* ── Dados dos produtos ────────────────────────────── */
+const PRODUCTS = {
+  '01':{color:'#7c5cff',badge:'PRODUTO 01',name:'Criação de Sites + Relatório de Resultado',headline:'Seu negócio merece um site que trabalha por você',hl2:'— não só existe.',subtitle:'Um site profissional que aparece no Google, passa credibilidade e converte visitante em cliente. Entregamos em até 5 dias úteis.',problema:'A maioria dos empresários locais tem dois problemas: não têm site — e perdem clientes para quem tem; ou têm um site ruim — e perdem credibilidade para quem aparece antes.\n\nTer presença no Google não é luxo. É o que separa quem é encontrado de quem é ignorado. E o relatório mensal existe porque você precisa saber se o seu site está realmente gerando resultados — não só existindo.',steps:[{title:'Curadoria e planejamento',time:'único',desc:'Reunião inicial para entender o negócio, o público e os objetivos. Mapeamos o que precisa estar no site para converter.'},{title:'Branding de identidade',time:'único',desc:'Definimos ou adaptamos a identidade visual: cores, tipografia e referências para o site ter uma cara única.'},{title:'Construção e otimização',time:'',desc:'Desenvolvemos o site com foco em performance, responsividade e SEO básico para aparecer no Google.'},{title:'Publicação',time:'',desc:'Site publicado no ar com domínio e hospedagem configurados. Pronto para ser encontrado.'},{title:'Análise de resultado',time:'mensal',desc:'Todo mês você recebe um relatório completo: visitantes, tempo de permanência, páginas mais acessadas, origem do tráfego e sugestão de melhoria.'},{title:'Acompanhamento e suporte',time:'',desc:'Canal direto para ajustes, dúvidas e atualizações básicas.'}],incluso:['Site em até 5 páginas responsivo','Design exclusivo com identidade visual da empresa','Integrações (WhatsApp, Google Maps, formulário de contato)','Relatório mensal automático de visitantes e performance','Site indexado ao Google (SEO básico)','Publicação e configuração de domínio','Suporte técnico incluso'],resultado:'Seu negócio vai aparecer no Google quando alguém procurar pelo que você vende na sua cidade. Visitantes terão uma primeira impressão profissional. E todo mês você vai saber, em números, se o site está funcionando.',investimento:'R$ 1.490 à vista ou R$ 297/mês\nHospedagem: R$ 35/mês',ctaText:'Quero meu site profissional →',ctaMsg:'Olá, ALLASKA! Tenho interesse no Produto 01 – Criação de Sites. Pode me contar mais?',pricing:{type:'tiers',tiers:[{n:'Básico',p:'R$ 1.500',desc:'Site limpo e direto ao ponto. Tudo que um negócio precisa: apresentação, serviços, preços e botão de WhatsApp. Funciona bem no celular e no computador.'},{n:'Intermediário',p:'R$ 2.500',desc:'O site tem movimento. Abre com uma tela animada com o nome do negócio. As seções aparecem com animação, tem galeria de fotos e faixa com o nome da marca.'},{n:'Experience',p:'R$ 3.000',desc:'Identidade visual de alto impacto com animações 3D, intro cinematográfica e efeitos de parallax. Para negócios que querem transmitir autoridade máxima e se posicionar acima da concorrência.'}]}},
+  '02':{color:'#3ecf5e',badge:'PRODUTO 02',name:'Prospecção de Leads Automática',headline:'Novos clientes chegando todo dia',hl2:'— sem você precisar procurar um por um.',subtitle:'O sistema prospecta no Google Maps, qualifica cada lead, cria mensagens com IA e manda por WhatsApp e e-mail — todo dia, sem intervenção manual.',problema:'Prospectar cliente manualmente toma horas. Você para de prospectar, a agenda esvazia, e o ciclo recomeça no desespero.\n\nA maioria dos negócios locais tem concorrentes com presença digital fraca — são clientes em potencial que nunca vão te encontrar se você não for até eles. O problema é que ir até cada um, um por um, é inviável.',steps:[{title:'Configuração inicial via planilha',time:'único',desc:'A ALLASKA configura o sistema e define 3 parâmetros: cidade, nicho e critérios de qualificação.'},{title:'Análise de presença digital',time:'',desc:'O sistema busca o lead e analisa: tem site? Está no Google Maps? WhatsApp? Avaliações? Tudo vira o score de oportunidade.'},{title:'Geração de mensagens personalizadas',time:'',desc:'O sistema gera uma mensagem única para cada lead com o nome do negócio, o que falta na presença digital e o que a ALLASKA oferece.'},{title:'Envio via WhatsApp e Email',time:'',desc:'Mensagens enviadas automaticamente para cada lead qualificado, no horário certo, sem intervenção manual.'},{title:'Relatório de resultados',time:'',desc:'Quantos leads foram contatados, quais responderam, quais pediram mais informação. Tudo no painel.'}],incluso:['Lista automatizada via Google Maps por cidade e nicho','Análise de presença digital de cada lead','Score de oportunidade por lead','Até 100 leads qualificados por semana','Mensagens personalizadas com IA','Configuração automática do lead no CRM','Relatório semanal de prospecção'],resultado:'Você para de depender de indicação ou prospecção manual. O sistema trabalha enquanto você atende. Sua agenda começa a lotar com pessoas que já sabem quem você é.',investimento:'Sob consulta',ctaText:'Quero prospectar no automático →',ctaMsg:'Olá, ALLASKA! Tenho interesse no Produto 02 – Prospecção Automática. Pode me contar mais?',pricing:{type:'dual',v:'R$ 1.500',m:'R$ 450/mês'}},
+  '03':{color:'#e8a4b5',badge:'PRODUTO 03',name:'Sistema de Criação de Conteúdo Automático',headline:'Conteúdo profissional todo dia no Instagram',hl2:'— sem designer, sem agência, sem horas no Canva.',subtitle:'O sistema gera carrosséis e stories completos com identidade visual do seu negócio, prontos para publicar.',problema:'Postar todo dia no Instagram é impossível para quem tem um negócio para tocar. A maioria dos empresários para de postar, some das redes, perde relevância — e o algoritmo do Instagram pune quem some.\n\nContratar um designer ou agência é caro e ainda exige horas aprovando conteúdo. E no final, o conteúdo não tem a sua voz.',steps:[{title:'Configuração da identidade visual',time:'único',desc:'A ALLASKA coleta logo, paleta de cores, tipografia e referências. O sistema incorpora essa identidade permanentemente.'},{title:'Você define o tema',time:'uma vez por semana',desc:'Você manda o tema — promoção, dica, apresentação de serviço. Qualquer assunto relevante para a sua audiência.'},{title:'Geração dos carrosséis',time:'',desc:'Slide 1: Capa com headline. Slide 2: Conteúdo. Slide 3: CTA profissional. Layout, texto e imagem gerados por IA com a sua identidade.'},{title:'Geração dos stories',time:'',desc:'Story 1: Gancho. Story 2: Engajamento. Story 3: Revelação. Story 4: CTA direto. Arco narrativo completo por tema.'},{title:'Arquivos prontos para publicar',time:'',desc:'Sistema monta o arquivo no formato correto para o Instagram. Você só publica.'}],incluso:['Carrosséis de 3+ slides com identidade visual do negócio','Arco de 4 stories narrativos por tema','Imagens geradas por inteligência artificial','Textos com tom de voz do negócio','Arquivos no tamanho certo para o Instagram','Configuração inicial da identidade visual inclusa'],resultado:'Conteúdo consistente e profissional sem depender de freelancer ou agência. Nenhum designer, nenhum redator necessário para o processo rodar.',investimento:'Sob consulta',ctaText:'Quero conteúdo no automático →',ctaMsg:'Olá, ALLASKA! Tenho interesse no Produto 03 – Conteúdo Automático. Pode me contar mais?',pricing:{type:'dual',v:'R$ 3.000',m:'R$ 1.000/mês'}},
+  '04':{color:'#f39c12',badge:'PRODUTO 04',name:'Remarketing Automático',headline:'Recupere os clientes que já mostraram interesse',hl2:'— e ainda não fecharam.',subtitle:'Sistema que identifica visitantes do seu site e dispara sequência automática de follow-up para trazê-los de volta.',problema:'A maioria dos clientes não compra na primeira vez. Pesquisam, visitam o site, salvam o perfil — e somem. Sem follow-up automático, você perde entre 60% e 80% das vendas que quase aconteceram — sem saber que perdeu.\n\nEssas pessoas já te conhecem. Já demonstraram interesse. Falta apenas o empurrão certo na hora certa.',steps:[{title:'Configuração inicial',time:'único',desc:'A ALLASKA acessa o Google Analytics 4 e configura eventos: clique no WhatsApp, visita à página de preços, tempo na página.'},{title:'Identificação de leads quentes',time:'',desc:'Quem visita preços mas não clica no WhatsApp, ou passa mais de 2 minutos sem contato — é marcado como lead quente automaticamente.'},{title:'Sequência de remarketing',time:'',desc:'Dia 1: Mensagem gentil. Dia 7: Oferta ou caso de uso. Dia 10: Facilidade para fechar. Personalizadas com base no comportamento.'},{title:'Relatório de recuperação',time:'',desc:'Quantos leads identificados, contatados e convertidos. Você enxerga cada venda recuperada.'}],incluso:['Integração com Google Analytics 4 do site','Identificação automática de visitantes com comportamento de lead quente','Sequência de 3 mensagens de remarketing por lead','Personalização baseada no comportamento de cada visitante','Relatório de recuperação de leads por período','Configuração completa pela ALLASKA'],resultado:'Você recupera clientes que já mostraram interesse sem fazer nada manualmente. Cada venda recuperada é receita que você teria perdido.',investimento:'Sob consulta',ctaText:'Quero recuperar clientes automaticamente →',ctaMsg:'Olá, ALLASKA! Tenho interesse no Produto 04 – Remarketing Automático. Pode me contar mais?',pricing:{type:'dual',v:'R$ 2.000',m:'R$ 750/mês'}},
+  '05':{color:'#25d366',badge:'PRODUTO 05',name:'Gerador de Avaliação Google',headline:'Mais avaliações no Google. Mais clientes te encontrando.',hl2:'No automático.',subtitle:'Sistema que gera o pedido de avaliação personalizado para mandar no WhatsApp do cliente após cada atendimento — em menos de 30 segundos.',problema:'90% dos clientes satisfeitos nunca deixam avaliação no Google porque ninguém pede de forma fácil e direta. Poucas avaliações = posição mais baixa = menos clientes te encontrando.\n\nO problema não é falta de clientes satisfeitos. É a falta de um processo simples para pedir a avaliação na hora certa.',steps:[{title:'Configuração inicial',time:'único',desc:'A ALLASKA cadastra o cliente e registra o Place ID do Google Maps. Feito uma única vez.'},{title:'Geração do pedido após atendimento',time:'',desc:'Atendeu, abre o sistema, seleciona o cliente e clica no modelo. 1 clique — a mensagem já está pronta.'},{title:'Link direto na mensagem',time:'',desc:'Cada mensagem contém o link direto para a página de avaliação do Google Maps. O cliente chega lá em 1 clique.'},{title:'Histórico de envios',time:'',desc:'Salvo no sistema o histórico de envio — evitando pedir para a mesma pessoa duas vezes.'}],incluso:['3 modelos de mensagem prontos e personalizados','Link direto para o Google Maps sem barreiras','Histórico de pedidos enviados por cliente','Registro de envios para evitar repetição','Configuração completa pela ALLASKA','Instalado na máquina do negócio'],resultado:'Em 30 dias o dobro de avaliações no Google. Mais avaliações = posição mais alta = mais clientes chegando organicamente, sem pagar anúncio.',investimento:'Incluso nos pacotes\nou R$ 97/mês standalone',ctaText:'Quero mais avaliações no Google →',ctaMsg:'Olá, ALLASKA! Tenho interesse no Produto 05 – Gerador de Avaliação Google. Pode me contar mais?',pricing:{type:'dual',v:'R$ 1.000',m:'R$ 450/mês'}},
+  '06':{color:'#3498db',badge:'PRODUTO 06',name:'Rastreamento de Concorrência Semanal',headline:'Toda semana você sabe o que seu concorrente fez',hl2:'— antes que ele te passe na frente.',subtitle:'Sistema automático que monitora nota e avaliações dos concorrentes no Google toda semana e entrega relatório na manhã de segunda.',problema:'Você não sabe o que seu concorrente está fazendo. Se ele baixou o preço ou ganhou 20 avaliações novas — você fica sabendo tarde demais, quando ele já subiu na busca.\n\nMonitorar concorrência manualmente toda semana é impossível. Quem tem negócio não tem tempo para isso.',steps:[{title:'Instalação e configuração',time:'único',desc:'A ALLASKA instala o sistema e configura até 5 concorrentes com o Place ID do Google Maps.'},{title:'Coleta automática semanal',time:'',desc:'Todo domingo às 0h o sistema roda sem nenhuma ação do cliente. Coleta nota e avaliações de cada concorrente.'},{title:'Dashboard atualizado',time:'',desc:'Acesse o link da dashboard: nota com delta, avaliações novas, gráfico de evolução e comparativo visual.'},{title:'Detecção de movimentações',time:'',desc:'Quando o sistema detecta mudança relevante, o cliente é alertado imediatamente — e pode reagir antes da consolidação.'}],incluso:['Monitoramento de até 5 concorrentes no Google Maps','Coleta automática todo domingo às 0h','Dashboard com nota e avaliações de cada concorrente','Setas indicando variação semana a semana','Alertas de movimentações relevantes','Histórico semanal completo','Instalação e configuração pela ALLASKA'],resultado:'Você reage rápido quando o mercado se move — enquanto os concorrentes ainda estão descobrindo o que aconteceu.',investimento:'R$ 297 instalação\n+ R$ 97/mês manutenção',ctaText:'Quero monitorar meus concorrentes →',ctaMsg:'Olá, ALLASKA! Tenho interesse no Produto 06 – Rastreamento de Concorrência. Pode me contar mais?',pricing:{type:'dual',v:'R$ 3.000',m:'R$ 1.400/mês'}},
+  '07':{color:'#e74c3c',badge:'PRODUTO 07',name:'Gerador de Proposta Comercial + Follow-up',headline:'Proposta profissional em 1 minuto.',hl2:'Follow-up automático até o fechamento.',subtitle:'Sistema que gera propostas em PDF e avisa automaticamente nos dias certos para fazer follow-up — com a mensagem já escrita.',problema:'Você manda a proposta, o cliente some. Você fica sem jeito de cobrar; deixa para depois e perde o negócio. A maioria das vendas morre no silêncio após a proposta — não porque o cliente não quis, mas porque ninguém fez o follow-up na hora certa.\n\nFazer follow-up manualmente exige disciplina que a correria do dia a dia não permite.',steps:[{title:'Criação da proposta',time:'1 minuto',desc:'Preenche os campos: empresa, serviço e valor. O sistema gera a proposta com identidade visual — pronta para enviar. Ctrl+P → PDF → WhatsApp.'},{title:'Follow-ups agendados automaticamente',time:'',desc:'Dia 2: "Chegou tudo bem?"; Dia 5: "Tem alguma dúvida?"; Dia 10: oferta de fechamento. Mensagens prontas para copiar.'},{title:'Alertas no painel',time:'',desc:'Todo dia o sistema mostra os follow-ups que vencem hoje — com nome do cliente e mensagem pronta para copiar.'},{title:'Histórico de follow-ups',time:'',desc:'Após enviar, clica em "Follow-up Enviado". Fica salvo no histórico — você sabe o que foi dito e quando.'}],incluso:['Gerador de proposta em PDF com identidade visual profissional','Pacotes pré-configurados com valores da ALLASKA','Agendamento automático de 3 follow-ups (dias 2, 5 e 10)','Mensagens de follow-up prontas para copiar','Dashboard com todas as propostas, status e receita fechada','Alertas dos follow-ups que vencem hoje'],resultado:'Você nunca mais esquece de fazer follow-up. O sistema trabalha para fechar enquanto você está ocupado com outros clientes.',investimento:'Incluso nos pacotes\nou R$ 147/mês standalone',ctaText:'Quero automatizar minhas propostas →',ctaMsg:'Olá, ALLASKA! Tenho interesse no Produto 07 – Gerador de Proposta Comercial. Pode me contar mais?',pricing:{type:'dual',v:'R$ 2.000',m:'R$ 800/mês'}},
+  '08':{color:'#c9956c',badge:'PRODUTO 08',name:'Sistema de Reputação em Tempo Real',headline:'Avaliação negativa no Google? Você sabe na hora',hl2:'— e já tem a resposta pronta.',subtitle:'Sistema que monitora seu perfil no Google Maps e alerta quando aparece avaliação nova — com resposta sugerida já escrita.',problema:'Uma avaliação negativa sem resposta afasta dezenas de clientes antes que você saiba que ela existe. Negócios que respondem rapidamente têm até 3x mais conversão.\n\nO problema: você não tem como verificar o Google todo dia. Quando descobre, já faz uma semana que a avaliação está lá sem resposta.',steps:[{title:'Configuração inicial',time:'único',desc:'A ALLASKA cadastra o cliente e registra o Place ID. O sistema tira um snapshot inicial da situação atual.'},{title:'Monitoramento por snapshot',time:'',desc:'A cada verificação, o sistema compara o snapshot anterior com o atual. Se aparecer avaliação nova ou queda de nota: alerta imediato.'},{title:'Visual imediato no painel',time:'',desc:'Quando há alerta, a avaliação aparece em destaque. Clicando, você vê o conteúdo completo sem precisar abrir o Google.'},{title:'Resposta sugerida pronta',time:'',desc:'Para cada alerta, a resposta já está escrita — empática e profissional. Você copia e responde em 30 segundos.'}],incluso:['Monitoramento do perfil no Google Maps por snapshot','Alertas para avaliações novas e mudanças de nota','Resposta sugerida automática (positiva ou negativa)','Verificação manual disponível a qualquer momento','Histórico completo de monitoramentos','Integrado ao Produto 05 — sem custo adicional de setup'],resultado:'Você controla sua reputação em vez de ela te controlar. Uma avaliação negativa respondida bem converte melhor do que uma positiva ignorada.',investimento:'R$ 197 instalação\n+ R$ 97/mês (incluso no Produto 05)',ctaText:'Quero proteger minha reputação →',ctaMsg:'Olá, ALLASKA! Tenho interesse no Produto 08 – Sistema de Reputação. Pode me contar mais?',pricing:{type:'dual',v:'R$ 1.800',m:'R$ 750/mês'}},
+};
+
+/* ── Render ──────────────────────────────────────────── */
+function getParam(name){return new URLSearchParams(window.location.search).get(name)||'01';}
+
+function renderLP(){
+  const id  = getParam('id').padStart(2,'0');
+  const p   = PRODUCTS[id] || PRODUCTS['01'];
+  const idx = parseInt(id,10) - 1;
+  const c   = p.color;
+  const th  = BG[idx] || BG[0];
+
+  document.title = `${p.name} — Allaska`;
+  document.querySelector('meta[name="description"]').setAttribute('content', p.subtitle);
+  document.querySelector('meta[property="og:title"]').setAttribute('content', `${p.name} — Allaska`);
+  document.querySelector('meta[property="og:description"]').setAttribute('content', p.subtitle);
+  document.querySelector('link[rel="canonical"]').setAttribute('href', `https://allaska.com.br/produto.html?id=${id}`);
+  document.documentElement.style.setProperty('--c', c);
+
+  const stepsHTML = p.steps.map((s,i)=>`
+    <div class="step">
+      <div class="step-num">${String(i+1).padStart(2,'0')}</div>
+      <div>
+        <div class="step-head">
+          <span class="step-title">${s.title}</span>
+          ${s.time?`<span class="step-time">${s.time}</span>`:''}
+        </div>
+        <p class="step-desc">${s.desc}</p>
+      </div>
+    </div>`).join('');
+
+  const inclusoHTML = p.incluso.map(i=>`<li>${i}</li>`).join('');
+  const probHTML    = p.problema.split('\n\n').map(par=>`<p>${par}</p>`).join('');
+
+  function renderPricing(pr) {
+    if (!pr || pr.type === 'consult') return `<div class="po-price" style="font-size:16px;color:rgba(255,255,255,.5)">Sob consulta</div>`;
+    if (pr.type === 'dual') return `
+      <div class="pricing-dual">
+        <div>
+          <span class="po-tag">Vitalício</span>
+          <div class="po-price">${pr.v}</div>
+          <div class="po-note">Pagamento único — o sistema é seu para sempre. Sem manutenção inclusa; suporte sob demanda.</div>
+        </div>
+        <div class="pricing-vsep"></div>
+        <div>
+          <span class="po-tag">Mensal</span>
+          <div class="po-price">${pr.m.replace('/mês','')}<small>/mês</small></div>
+          <div class="po-note">Sistema seu para sempre — manutenção, atualizações e suporte inclusos todo mês.</div>
+        </div>
+      </div>`;
+    if (pr.type === 'tiers') return `
+      <div class="pricing-tiers">
+        ${pr.tiers.map(t=>`
+          <div class="pt">
+            ${t.desc?`<div class="pt-tooltip">${t.desc}</div>`:''}
+            <span class="pt-name">${t.n}</span>
+            <div class="pt-price">${t.p}</div>
+          </div>`).join('')}
+      </div>`;
+    return '';
+  }
+  const invHTML = renderPricing(p.pricing);
+
+  const bgCSS    = th.bg;
+  const glowCSS  = `radial-gradient(ellipse 65% 65% ${th.glow}, ${c}1c 0%, transparent 68%)`;
+
+  document.getElementById('lp-root').innerHTML = `
+    <!-- ── HERO ── -->
+    <section class="lp-hero">
+      <div class="lp-hero-bg" style="background:${bgCSS}">
+        <div style="position:absolute;inset:0;background:${glowCSS};pointer-events:none"></div>
+      </div>
+      <div class="lp-hero-sep"></div>
+
+      <div class="lp-hero-left">
+        <span class="product-badge">${p.badge}</span>
+        <h1 class="lp-headline">"${p.headline} <em>${p.hl2}</em>"</h1>
+        <p class="lp-subtitle">${p.subtitle}</p>
+        <div class="lp-hero-ctas">
+          <a class="btn-primary" href="${WA}${encodeURIComponent(p.ctaMsg)}" target="_blank" rel="noopener">${p.ctaText}</a>
+          <a class="btn-secondary" href="combo.html">Monte seu Combo →</a>
+        </div>
+      </div>
+
+      <div class="lp-hero-right">
+        ${VIS[idx] ? VIS[idx](c) : ''}
+      </div>
+    </section>
+    <div class="lp-divider"></div>
+
+    <!-- ── PROBLEMA ── -->
+    <section class="lp-section">
+      <span class="section-label">O Problema</span>
+      <div class="problema-text">${probHTML}</div>
+    </section>
+    <div class="lp-divider"></div>
+
+    <!-- ── COMO FUNCIONA ── -->
+    <section class="lp-section">
+      <span class="section-label">Como Funciona — Passo a Passo</span>
+      <div class="steps">${stepsHTML}</div>
+    </section>
+    <div class="lp-divider"></div>
+
+    <!-- ── INCLUSO + RESULTADO ── -->
+    <section class="lp-section">
+      <div class="details-grid">
+        <div>
+          <span class="section-label">O que está incluso</span>
+          <ul class="incluso-list">${inclusoHTML}</ul>
+        </div>
+        <div>
+          <span class="section-label">Resultado Esperado</span>
+          <p class="resultado-text">${p.resultado}</p>
+          <div class="investimento-block">
+            <div class="inv-label">Investimento</div>
+            ${invHTML}
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="lp-divider"></div>
+
+    <!-- ── CTA ── -->
+    <section class="lp-cta-section">
+      <div class="cta-row">
+        <a class="btn-primary" href="${WA}${encodeURIComponent(p.ctaMsg)}" target="_blank" rel="noopener">${p.ctaText}</a>
+        <a class="btn-secondary" href="combo.html">Monte seu Combo →</a>
+      </div>
+      <p class="cta-note">Ao clicar, você será direcionado ao WhatsApp da ALLASKA.</p>
+    </section>
+
+    <!-- ── COMBO BLOCK ── -->
+    <div class="combo-block">
+      <div>
+        <h3>Não sabe por onde começar? Monte seu combo personalizado.</h3>
+        <p>Responda 3 perguntas rápidas e a ALLASKA monta o pacote ideal para o seu negócio.</p>
+      </div>
+      <a class="btn-combo" href="combo.html">Montar meu Combo →</a>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <footer class="lp-footer">
+      <span class="footer-brand">Allaska</span>
+      <span class="footer-note">© 2026 Allaska · Todos os direitos reservados</span>
+    </footer>
+  `;
+}
+
+renderLP();
+</script>
+</body>
+</html>
